@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  color: lightgrey;
+  background-color: #282c34;
+}
+
+p {
+  margin-top: 0px;
+  font-size: 40px;
+}
+
+.row {display:flex; flex-direction:row;}
+
+.row-center {
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+}
+
+.depth-chart {
+  padding-bottom: 30px;
+}

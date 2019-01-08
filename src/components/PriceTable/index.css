@@ -1,0 +1,9 @@
+.orderbook-table {
+  border-color: lightgrey;
+  width: 50%;
+}
+
+.orderbook-table button {
+  background-color: gainsboro !important;
+  color: black !important;
+}

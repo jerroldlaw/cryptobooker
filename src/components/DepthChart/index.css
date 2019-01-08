@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+}
+
+.depth {
+  margin: auto;
+  width: 75%;
+  height: 400px;
+}
+
+.depth-container {
+  width: 100%;
+  height: 100%;
+}
