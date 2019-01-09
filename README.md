@@ -49,3 +49,8 @@ bittrex bid
 -- Wait for React app to build --
 ~ npm run electron
 ```
+
+#### To package Electron Production Build
+```
+~ npm run electron-package
+```
