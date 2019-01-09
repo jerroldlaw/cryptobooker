@@ -18,7 +18,7 @@
     "eject": "react-scripts eject",
     "electron": "electron .",
     "electron-dev": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
-    "electron-package": "electron-packager . Cyrptobooker"
+    "electron-package": "electron-packager . Cryptobooker"
   },
   "eslintConfig": {
     "extends": "react-app"
