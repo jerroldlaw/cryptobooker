@@ -5,6 +5,8 @@ Since Bittrex and Krakken both do not allow CORS requests from a different origi
 
 Demo URL: (not yet)
 
+![screenshot](https://i.imgur.com/mC3bJKU.png)
+
 #### Installation
 ```
 ~ git clone git@github.com:jerroldlaw/cryptobooker.git
