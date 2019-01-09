@@ -10,7 +10,25 @@ export default class PriceTable extends Component {
     this.state = {
       columns: [{
         Header: `${this.props.header} Price`,
-        accessor: 'price',
+        Cell: (data) => {
+          if (this.props.header === 'Bid'){
+            if (data.original.price > this.props.minAsk) {
+              return `${data.original.price} (Arbitraged Price)`
+            }
+            else {
+              return data.original.price
+            }
+          }
+          else {
+            if (data.original.price < this.props.maxBid) {
+              return `${data.original.price} (Arbitraged Price)`
+            }
+            else {
+              return data.original.price
+            }
+          }
+
+        },
         filterMethod: (filter, row) => {
           return (row[filter.id].toLowerCase()).includes(filter.value.toLowerCase());
         }
@@ -41,6 +59,14 @@ export default class PriceTable extends Component {
       filterAll: '',
     }
     this.filterAll = this.filterAll.bind(this);
+  }
+
+  checkArbitrageMin(currPrice, min) {
+
+  }
+
+  checkArbitrageMax(currPrice, max) {
+
   }
 
   onFilteredChange(filtered) {

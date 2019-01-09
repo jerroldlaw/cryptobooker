@@ -23,6 +23,30 @@ class App extends Component {
     })
   }
 
+  getMinAsk(data, exchange) {
+    let min = Number.MAX_VALUE
+
+    data.forEach((quote) => {
+      if (quote.exchange === exchange) {
+        min = Math.min(min, quote.price)
+      }
+    })
+
+    return(min)
+  }
+
+  getMaxBid(data, exchange) {
+    let max = -Number.MAX_VALUE
+
+    data.forEach((quote) => {
+      if (quote.exchange === exchange) {
+        max = Math.max(max, quote.price)
+      }
+    })
+
+    return max
+  }
+
   render() {
     return (
       <div className="App">
@@ -36,8 +60,8 @@ class App extends Component {
           </span>
         </div>
         <div className='row'>
-          <PriceTable header='Bid' data={this.state.bidData} />
-          <PriceTable header='Ask' data={this.state.askData} />
+          <PriceTable minAsk={this.getMinAsk(this.state.askData, 'bittrex')} header='Bid' data={this.state.bidData} />
+          <PriceTable maxBid={this.getMaxBid(this.state.bidData, 'kraken')} header='Ask' data={this.state.askData} />
         </div>
       </div>
     )
