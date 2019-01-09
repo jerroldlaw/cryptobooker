@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    let response = await fetch('http://localhost:3000/orderbook')
+    let response = await fetch('https://cryptobooker-server.herokuapp.com/orderbook')
     let json = await response.json()
 
     this.setState({
