@@ -9,13 +9,16 @@ class App extends Component {
 
     this.state = {
       askData: [],
-      bidData: []
+      bidData: [],
+      loading: false,
     }
   }
 
   async componentDidMount() {
+    this.setState({loading: true})
     let response = await fetch('https://cryptobooker-server.herokuapp.com/orderbook')
     let json = await response.json()
+    this.setState({loading: false})
 
     this.setState({
       bidData: json.bids,
@@ -47,9 +50,20 @@ class App extends Component {
     return max
   }
 
+  renderLoading(){
+    if(this.state.loading){
+      return(
+        <div class="overlay">
+          <div class="lds-ripple"><div></div><div></div></div>
+        </div>
+      )
+    }
+  }
+
   render() {
     return (
       <div className="App">
+        {this.renderLoading()}
         <p>
           Cryptobooker
         </p>
