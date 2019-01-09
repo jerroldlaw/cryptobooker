@@ -15,10 +15,19 @@ Demo URL: (not yet)
 
 #### To run on React
 ```
-npm start
+~ npm start
 ```
 
-#### To run on Electron
+#### To run on Electron on Development
 ```
-npm run electron
+~ npm start
+-- Wait for React app to load --
+~ npm run electron-dev
+```
+
+#### To run on Electron on Production Build
+```
+~ npm run build
+-- Wait for React app to build --
+~ npm run electron
 ```
