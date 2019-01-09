@@ -17,7 +17,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron": "electron .",
-    "electron-dev": "set ELECTRON_START_URL=http://localhost:3000 && electron ."
+    "electron-dev": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
+    "electron-package": "electron-packager . Cyrptobooker"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,6 +30,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "electron": "^4.0.1"
+    "electron": "^4.0.1",
+    "electron-packager": "^13.0.1"
   }
 }
